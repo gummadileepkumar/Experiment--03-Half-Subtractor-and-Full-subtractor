@@ -26,29 +26,67 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
+1.Use module projname(input,output) to start the Verilog programmming.
+
+2.Assign inputs and outputs using the word input and output respectively.
+
+3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression.
+
+4.Use each output to represent one for difference and the other for borrow.
+
+5.End the verilog program using keyword endmodule.
 
 
-
-Write the detailed procedure here 
 
 
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+```python
+Developed by: Gumma Dileep Kumar
+RegisterNumber: 212222240032 
+```
 */
+#### Half Subtractor program:
+```python
+module HalfSubtractor(A,B,Difference,Borrow);
+input A,B;
+output Difference,Borrow;
+assign Difference = (A ^ B);
+assign Borrow = (~A & B);
+endmodule
+```
+#### Full Subtractor program:
+```python
+module FullSubtractor(A,B,C,Difference,Borrow);
+input A,B,C;
+output Difference,Borrow;
+assign Difference = (~A &(B ^ C) | (B & C));
+assign Borrow = ( A^B^C);
+endmodule
+```
+
 
 ## Output:
 
 ## Truthtable
-
-
+#### Half Subtractor:
+![model](/4.5_halftable.png)
+#### Full Subtractor:
+![model](/4.5_halftable.png)
 
 ##  RTL realization
+#### Half Subtractor:
+![model](/4.2_gate.png)
+#### Full Subtractor:
+![model](/4.3_gate.png)
 
 
 ## Timing diagram 
+#### Half Subtractor:
+![model](/4.1_wave.png)
+#### Full subtractor:
+![model](/4.4_wave.png)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
