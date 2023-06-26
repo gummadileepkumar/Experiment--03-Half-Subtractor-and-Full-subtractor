@@ -73,7 +73,8 @@ endmodule
 #### Half Subtractor:
 ![model](/4.5_halftable.png)
 #### Full Subtractor:
-![model](/4.5_halftable.png)
+![DE_fulsubtractor](https://github.com/gummadileepkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118707761/f3a080c8-2e6d-44c3-a37e-dbbc9a45a19c)
+
 
 ##  RTL realization
 #### Half Subtractor:
